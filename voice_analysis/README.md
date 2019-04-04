@@ -7,13 +7,10 @@ install nvidia-docker
 
 Then run following commands
 
-git clone https://blisuru@bitbucket.org/blisuru/voice_analysis.git  
+git clone https://github.com/SaralaSewwandi/voice-project.git
 cd voice_analysis  
 docker build -t bl:voiceml .  
-cd VoiceToText/DeepSpeech  
-wget https://github.com/mozilla/DeepSpeech/releases/download/v0.4.1/deepspeech-0.4.1-models.tar.gz  
-tar xvfz deepspeech-0.4.1-models.tar.gz  
-cd ../../
+
 
 ##Running
 nvidia-docker run -it -v ${PWD}:/app --network="host" bl:voiceml
